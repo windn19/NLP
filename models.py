@@ -10,7 +10,7 @@ def load_model():
 
 
 def translate(img2text, trans, img):
-    print('12')
+    st.write('11')
     texts = img2text(img)[0]
-    print(texts)
+    st.write(texts)
     return trans(texts['generated_text'])
