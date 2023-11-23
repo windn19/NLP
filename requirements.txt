@@ -1,3 +1,5 @@
 transformers
 sentencepiece
 sacremoses
+tensorflow
+torch
