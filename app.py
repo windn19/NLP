@@ -20,4 +20,4 @@ img = load_image()
 result = st.button('Распознать изображение')
 if result:
     st.write('**Результат распознавания:**')
-    translate(*model, img)
+    st.write(translate(*model, img))
