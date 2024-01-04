@@ -1,7 +1,21 @@
+from fastapi import FastAPI
+from pydantic import BaseModel
 from transformers import pipeline
 
-image_to_text = pipeline("image-to-text", model="nlpconnect/vit-gpt2-image-captioning")
+app = FastAPI()
 translate = pipeline('translation_en_to_ru', model='Helsinki-NLP/opus-mt-en-ru')
 
-texts = image_to_text("andrea-rodriguez-YsGtJLKZVgk-unsplash.jpg")
-print(translate(texts['generated_text']))
+
+class Item(BaseModel):
+    text: str
+
+
+@app.get('/')
+def root():
+    return {'message': 'Hello World!!!'}
+
+
+@app.post('/predict/')
+def predict(item: Item):
+    """Перевод текста"""
+    return translate(item.text)

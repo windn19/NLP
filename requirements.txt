@@ -3,3 +3,5 @@ sentencepiece
 sacremoses
 tensorflow
 torch
+fastapi
+uvicorn
