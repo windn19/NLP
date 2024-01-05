@@ -14,7 +14,7 @@ pip install -r requirements.txt
 2. Запуск веб приложения совершается через команду run
 
 ```bash
-unicorn main:app
+uvicorn main:app
 ```
 
 3. В проекте есть две точки доступа: index и predict
