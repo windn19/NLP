@@ -1,5 +1,5 @@
 transformers
-sentencepiece
-sacremoses
+# sentencepiece
+# sacremoses
 tensorflow
 torch
