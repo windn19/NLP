@@ -5,3 +5,4 @@ tensorflow
 torch
 fastapi
 uvicorn
+pytest
